@@ -1,0 +1,30 @@
+{
+  "_comment": "ASF Pterodactyl Egg",
+  "meta": {
+    "version": "PTDL_v2"
+  },
+  "name": "ArchiSteamFarm",
+  "author": "abe@solarcosmic.net",
+  "description": "ArchiSteamFarm bot",
+  "docker_images": {
+    "ASF": "ghcr.io/solarcosmic/ptero-asf:latest"
+  },
+  "startup": "./ArchiSteamFarm",
+  "config": {
+    "files": "{}",
+    "startup": {
+      "done": "ASF",
+      "userInteraction": []
+    },
+    "logs": "{}",
+    "stop": "^C"
+  },
+  "scripts": {
+    "installation": {
+      "script": "#!/bin/bash\ncd /mnt/server\n",
+      "container": "ghcr.io/solarcosmic/ptero-asf:latest",
+      "entrypoint": "bash"
+    }
+  },
+  "variables": []
+}
